@@ -13,15 +13,13 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<!-- Frokesy's GitHub Banner --> <img src="https://ik.imagekit.io/9ghb9cknpe/Copy_of_Copy_of_Copy_of_Copy_of_Untitled_Jf85l-4OY.png?updatedAt=1630229208778" alt="Frokesy's GitHub Banner"/>
+Hey there 👋
+
+I’m Ayanfeoluwa, a front-end engineer, a passionate and enthusiastic individual that focuses on producing pixel perfect design. I am currently learning UI designs and design principles in a bid to achieve pixel perfection. I make it my mission to translate user-focused designs into pixel-perfect websites or applications that run blazing fast.
 
 [![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/_frokes)
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/)
 
-
-Hey there 👋
-
-I’m Ayanfeoluwa, a front-end engineer, a passionate and enthusiastic individual that focuses on producing pixel perfect design. I am currently learning UI designs and design principles in a bid to achieve pixel perfection. I make it my mission to translate user-focused designs into pixel-perfect websites or applications that run blazing fast.
 
 
 ## 💼 Skills
