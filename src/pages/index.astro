@@ -1,5 +1,23 @@
 ---
-
+import SideNav from "../components/SideNav.astro";
 ---
 
-<h2>Hello World!!!</h2>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Andika", sans-serif;
+    }
+  </style>
+</head>
+
+<div class="from-[#0f172a] bg-gradient-to-r to-[#333] w-[100%] h-[100vh] text-[#fff]">
+  <div class="w-[70vw] pt-[15vh] mx-auto">
+    <SideNav />
+  </div>
+</div>
