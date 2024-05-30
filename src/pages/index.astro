@@ -1,5 +1,13 @@
 ---
 import SideNav from "../components/SideNav.astro";
+import MainContent from "../components/MainContent.astro";
+
+const lenisOptions = {
+    lerp: 0.1,
+    duration: 1.5,
+    smoothTouch: true,
+    smooth: true,
+  };
 ---
 
 <head>
@@ -13,11 +21,36 @@ import SideNav from "../components/SideNav.astro";
     body {
       font-family: "Andika", sans-serif;
     }
+    
+.scroll-container {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #333; /* For Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
   </style>
 </head>
-
 <div class="from-[#0f172a] bg-gradient-to-r to-[#333] w-[100%] h-[100vh] text-[#fff]">
-  <div class="w-[70vw] pt-[15vh] mx-auto">
+  <div class="w-[70vw] mx-auto flex justify-between">
     <SideNav />
+    <div class="scroll-container h-[100vh] overflow-scroll overflow-x-hidden w-[50%]">
+        <MainContent />
+    </div>
   </div>
 </div>
