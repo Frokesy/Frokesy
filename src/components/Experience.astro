@@ -1,0 +1,16 @@
+---
+const { data } = Astro.props
+
+console.log("hello world", data)
+---
+
+<div class="px-4 pt-20">
+    <h2 class="text-[32px] font-semibold">Experience</h2>
+
+    <div class="card">
+        <div class="flex justify-between">
+            <p>{data.duration}</p>
+            <p>{data.title} - {data.company}</p>
+        </div>
+    </div>
+</div>

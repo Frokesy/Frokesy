@@ -12,6 +12,7 @@
     "dependencies": {
         "@astrojs/tailwind": "^5.1.0",
         "@astrojs/ts-plugin": "^1.8.0",
+        "@studio-freight/lenis": "^1.0.42",
         "astro": "^4.9.2",
         "astro-lenis": "^2.4.0",
         "normalize.css": "^8.0.1",

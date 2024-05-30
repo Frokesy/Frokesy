@@ -1,5 +1,5 @@
 ---
-
+import Experience from "../components/Experience.astro"
 ---
 
 <div class="mt-[15vh]">
@@ -28,5 +28,15 @@
       confusing times, I find relaxation and inspiration in listening to
       motivational podcasts.
     </p>
+  </div>
+
+  <div class="experience">
+    <Experience data={{
+      title: "Web Developer",
+      duration: "2022 - PRESENT",
+      desc: "This is a simple Test",
+      company: "WHEXcosystem (Freelance)",
+      tags: ["Next.js", "Tailwind"]
+    }} />
   </div>
 </div>
