@@ -1,5 +1,5 @@
 ---
-import Experience from "../components/Experience.astro"
+import Experience from "../components/Experience.astro";
 ---
 
 <div class="mt-[15vh]">
@@ -18,9 +18,9 @@ import Experience from "../components/Experience.astro"
       into front-end development. Today, I remain passionate about this field,
       constantly staying updated with the latest frameworks, technologies, and
       libraries. Over the years, I've dedicated myself to delivering
-      pixel-perfect, responsive, and dynamic designs for myself, clients and startups.
-      I've also learned the importance of writing well-optimized, clean code,
-      which has earned me recognition among my peers.
+      pixel-perfect, responsive, and dynamic designs for myself, clients and
+      startups. I've also learned the importance of writing well-optimized,
+      clean code, which has earned me recognition among my peers.
     </p>
     <p>
       When I'm not coding, I enjoy playing, watching, and analyzing football. I
@@ -30,13 +30,37 @@ import Experience from "../components/Experience.astro"
     </p>
   </div>
 
-  <div class="experience">
-    <Experience data={{
-      title: "Web Developer",
-      duration: "2022 - PRESENT",
-      desc: "Collaborated with the design team to improve web UI, achieving a 70% UX enhancement. Maintained the codebase for smooth updates and client issue resolution. Integrated a widget with the Embr team, boosting token sales. Implemented SEO strategies, increasing website visibility and organic traffic.",
-      company: "WHEXcosystem (Freelance)",
-      tags: ["Next.js", "Tailwind"]
-    }} />
+  <div class="experience pt-20">
+    <h2 class="text-[32px] font-semibold">Experience</h2>
+
+    <Experience
+      data={{
+        title: "Web Developer",
+        duration: "Feb. 2022 - Feb. 2024",
+        desc: "Collaborated with the design team to improve web UI, achieving a 70% UX enhancement. Maintained the codebase for smooth updates and client issue resolution. Integrated a widget with the Embr team, boosting token sales. Implemented SEO strategies, increasing website visibility and organic traffic.",
+        company: "WHEXcosystem (Freelance)",
+        tags: ["Next.js", "Tailwind", "JavaScript"],
+      }}
+    />
+
+    <Experience
+      data={{
+        title: "Front-end Developer",
+        duration: "Feb 2023 - April 2023",
+        desc: "Transformed design concepts into polished websites with near pixel-perfection. Ensured compliance with regulatory standards while implementing functional web applications. Conducted thorough testing to identify and address issues, delivering iterative improvements to enhance user experience and meet client requirements.",
+        company: "Dexterpro (Contract)",
+        tags: ["React.js", "Tailwind", "TypeScript"],
+      }}
+    />
+
+    <Experience
+      data={{
+        title: "Front-end Developer",
+        duration: "Sept. 2020 - Oct. 2021",
+        desc: "Collaborated with designers to develop a responsive, cross-platform website for Luxuriant Flowers Schools, prioritizing user-friendly interfaces. Partnered with backend engineers to integrate API endpoints and develop a robust Student Record Management System, improving record-keeping efficiency by 25%. Conducted regular codebase maintenance, debugging errors, and ensuring timely updates to meet user requirements.",
+        company: "Luxuriant Flower Schools",
+        tags: ["HTML", "CSS", "JavaScript", "PHP"],
+      }}
+    />
   </div>
 </div>
