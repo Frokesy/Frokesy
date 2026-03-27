@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import HeroScene from "../components/HeroScene";
 import InteractiveNav from "../components/InteractiveNav";
 import MotionReveal from "../components/MotionReveal";
 
@@ -141,12 +142,8 @@ const projectThemes = [
                   <div class="hero-stage__grid"></div>
                   <div class="hero-stage__orb hero-stage__orb--primary"></div>
                   <div class="hero-stage__orb hero-stage__orb--secondary"></div>
-                  <div class="hero-stage__object">
-                    <div class="hero-stage__object-core"></div>
-                    <div class="hero-stage__object-ring hero-stage__object-ring--one"></div>
-                    <div class="hero-stage__object-ring hero-stage__object-ring--two"></div>
-                  </div>
-                  <div class="hero-stage__badge">Future `three.js` signature interaction</div>
+                  <HeroScene />
+                  <div class="hero-stage__badge">Interactive `three.js` hero scene</div>
                 </div>
               </div>
 
