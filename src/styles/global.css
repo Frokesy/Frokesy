@@ -853,6 +853,51 @@ p {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-progress {
+    box-shadow: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus-visible,
+  .button:hover,
+  .button:focus-visible,
+  .contact-links a:hover,
+  .contact-links a:focus-visible,
+  .info-card:hover,
+  .info-card:focus-within,
+  .timeline-card:hover,
+  .timeline-card:focus-within,
+  .project-card:hover,
+  .project-card:focus-within,
+  .contact-panel:hover,
+  .contact-panel:focus-within,
+  .section-panel:hover,
+  .section-panel:focus-within,
+  .hero-stage__frame:hover,
+  .hero-stage__frame:focus-within {
+    transform: none;
+  }
+
+  .button::after,
+  .site-nav a::after {
+    transition: none;
+  }
+}
+
 @media (max-width: 960px) {
   .page-shell {
     width: min(calc(100% - 1.5rem), var(--max-width));

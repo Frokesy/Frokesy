@@ -1,5 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { motion, useMotionValueEvent, useScroll, useSpring } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 
 type NavItem = {
   href: string;
@@ -13,6 +19,7 @@ type InteractiveNavProps = {
 
 export default function InteractiveNav({ items }: InteractiveNavProps) {
   const [activeId, setActiveId] = useState(items[0]?.href ?? "#about");
+  const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, {
     stiffness: 160,
@@ -64,7 +71,7 @@ export default function InteractiveNav({ items }: InteractiveNavProps) {
       <motion.div
         aria-hidden="true"
         className="scroll-progress"
-        style={{ scaleX: progress }}
+        style={{ scaleX: prefersReducedMotion ? scrollYProgress : progress }}
       />
 
       <nav className="site-nav" aria-label="Primary">
