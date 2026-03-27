@@ -1,0 +1,20 @@
+{
+  "name": "Ayanfeoluwa Akindele Portfolio",
+  "short_name": "Akindele",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061017",
+  "theme_color": "#061017",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -329,6 +329,15 @@ p {
   font-weight: 800;
 }
 
+.hero__title {
+  perspective: 1000px;
+}
+
+.hero__title-emphasis {
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+
 .section-heading h2 {
   max-width: 12ch;
   font-size: var(--font-size-xl);
@@ -363,6 +372,10 @@ p {
   max-width: 40rem;
   font-size: var(--font-size-lg);
   line-height: var(--leading-copy);
+}
+
+.hero__lede-line {
+  display: block;
 }
 
 .hero__signal-list {
@@ -490,6 +503,7 @@ p {
   background: radial-gradient(circle, rgba(94, 205, 182, 0.32) 0%, transparent 68%);
   filter: blur(18px);
   animation: heroFloat 9s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero-stage__grid {
@@ -501,12 +515,25 @@ p {
   background-size: 3.6rem 3.6rem;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), black 24%, black 75%, transparent);
   opacity: 0.34;
+  pointer-events: none;
+}
+
+.hero-stage__scanline {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 0%, rgba(122, 231, 199, 0.08) 48%, transparent 100%);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  animation: stageSweep 9s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero-stage__orb {
   position: absolute;
   border-radius: 999px;
   filter: blur(2px);
+  pointer-events: none;
 }
 
 .hero-stage__orb--primary {
@@ -531,28 +558,16 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
+  animation: heroDrift 12s ease-in-out infinite;
+  contain: layout paint size;
+  will-change: transform;
+  pointer-events: auto;
 }
 
 .hero-scene canvas {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.hero-stage__badge {
-  position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 2;
-  max-width: 14rem;
-  padding: 0.75rem 0.95rem;
-  border: 1px solid rgba(135, 230, 209, 0.22);
-  border-radius: 1rem;
-  background: rgba(7, 16, 24, 0.74);
-  color: var(--text);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  backdrop-filter: blur(14px);
 }
 
 .hero__meta-grid {
@@ -802,6 +817,19 @@ p {
   }
 }
 
+@keyframes stageSweep {
+  0%,
+  100% {
+    transform: translateY(-45%);
+    opacity: 0.22;
+  }
+
+  50% {
+    transform: translateY(45%);
+    opacity: 0.5;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -844,6 +872,11 @@ p {
   .button::after,
   .site-nav a::after {
     transition: none;
+  }
+
+  .hero-stage__scanline,
+  .hero-scene {
+    animation: none;
   }
 }
 
@@ -929,11 +962,6 @@ p {
 
   .hero-stage__frame {
     min-height: 21rem;
-  }
-
-  .hero-stage__object {
-    width: 12rem;
-    height: 12rem;
   }
 
   .hero__actions,

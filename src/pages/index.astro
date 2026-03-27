@@ -1,8 +1,29 @@
 ---
 import "../styles/global.css";
+import HeroCopy from "../components/HeroCopy";
 import HeroScene from "../components/HeroScene";
 import InteractiveNav from "../components/InteractiveNav";
 import MotionReveal from "../components/MotionReveal";
+
+const siteTitle = "Ayanfeoluwa Akindele | Frontend Interaction Engineer";
+const siteDescription =
+  "Portfolio of Ayanfeoluwa Akindele, a frontend interaction engineer crafting sleek, high-performance, motion-rich web experiences.";
+const siteName = "Ayanfeoluwa Akindele Portfolio";
+const ogImage = "/og-image.svg";
+const themeColor = "#061017";
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ayanfeoluwa Akindele",
+  jobTitle: "Frontend Interaction Engineer",
+  description: siteDescription,
+  url: "/",
+  sameAs: [
+    "https://github.com/Frokesy",
+    "https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/",
+    "https://twitter.com/_frokes",
+  ],
+};
 
 const navigation = [
   { href: "#about", label: "About", number: "01" },
@@ -79,19 +100,32 @@ const projectThemes = [
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content={themeColor} />
+    <meta name="robots" content="index,follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <title>Ayanfeoluwa Akindele | Frontend Interaction Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Ayanfeoluwa Akindele, a frontend interaction engineer crafting sleek, responsive, and high-performance digital experiences."
-    />
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="Ayanfeoluwa Akindele portfolio preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Ayanfeoluwa Akindele portfolio preview" />
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
   </head>
   <body>
     <div class="page-shell">
@@ -108,42 +142,28 @@ const projectThemes = [
         <section class="hero section">
           <p class="section-kicker">Available for product teams, startups, and premium web experiences</p>
           <div class="hero__content">
-            <MotionReveal className="hero__copy" client:load>
-              <div class="hero__eyebrow-group">
-                <p class="hero__eyebrow">Frontend interaction engineer</p>
-                <p class="hero__eyebrow">5 years of professional experience</p>
-              </div>
-              <h1>
-                I design and build <em>interaction-rich</em> interfaces that stay fast, sharp, and unmistakably intentional.
-              </h1>
-              <p class="hero__lede">
-                I translate visual direction into polished frontend systems with a
-                strong eye for motion, UI behavior, and implementation detail.
-                My work blends product thinking, visual precision, and
-                performance discipline to create experiences people can feel.
-              </p>
-
-              <ul class="hero__signal-list" aria-label="Core strengths">
-                <li>Motion systems that support hierarchy and feedback</li>
-                <li>Responsive UI engineered for product and marketing surfaces</li>
-                <li>Frontend craft that balances polish, speed, and maintainability</li>
-              </ul>
-
-              <div class="hero__actions">
-                <a class="button button--primary" href="#projects">View selected work</a>
-                <a class="button button--secondary" href="#contact">Get in touch</a>
-              </div>
-            </MotionReveal>
+            <HeroCopy
+              client:load
+              eyebrows={[
+                "Frontend interaction engineer",
+                "5 years of professional experience",
+              ]}
+              signals={[
+                "Motion systems that support hierarchy and feedback",
+                "Responsive UI engineered for product and marketing surfaces",
+                "Frontend craft that balances polish, speed, and maintainability",
+              ]}
+            />
 
             <MotionReveal className="hero__stage" delay={0.12} y={36} client:load>
               <div class="hero-stage">
                 <div class="hero-stage__frame">
                   <div class="hero-stage__glow"></div>
                   <div class="hero-stage__grid"></div>
+                  <div class="hero-stage__scanline"></div>
                   <div class="hero-stage__orb hero-stage__orb--primary"></div>
                   <div class="hero-stage__orb hero-stage__orb--secondary"></div>
                   <HeroScene />
-                  <div class="hero-stage__badge">Interactive `three.js` hero scene</div>
                 </div>
               </div>
 
