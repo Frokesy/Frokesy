@@ -81,17 +81,17 @@ const projectThemes = [
   {
     title: "Interaction-First Product Surfaces",
     description:
-      "Interfaces that turn complex product states into responsive, intuitive user feedback.",
+      "Complex UI states translated into clear feedback, stronger hierarchy, and interfaces that feel reliable under real use.",
   },
   {
     title: "Motion-Driven Marketing Experiences",
     description:
-      "Fast landing pages and campaign sites where animation strengthens storytelling and conversion.",
+      "Landing pages and campaigns where motion supports pacing, storytelling, and conversion without slowing the experience down.",
   },
   {
     title: "Design Systems With Frontend Discipline",
     description:
-      "Reusable UI patterns that stay visually sharp while remaining maintainable in real-world codebases.",
+      "Reusable UI patterns built to stay expressive, scalable, and maintainable once they reach a real codebase.",
   },
 ];
 ---
@@ -128,6 +128,7 @@ const projectThemes = [
     <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="page-shell">
       <header class="site-header">
         <a class="site-mark" href="#top" aria-label="Go to top">
@@ -138,20 +139,21 @@ const projectThemes = [
         <InteractiveNav items={navigation} client:load />
       </header>
 
-      <main id="top">
-        <section class="hero section">
+      <main id="main-content" tabindex="-1">
+        <section class="hero section" id="top" aria-labelledby="hero-title">
           <p class="section-kicker">Available for product teams, startups, and premium web experiences</p>
           <div class="hero__content">
             <HeroCopy
               client:load
+              titleId="hero-title"
               eyebrows={[
                 "Frontend interaction engineer",
                 "5 years of professional experience",
               ]}
               signals={[
-                "Motion systems that support hierarchy and feedback",
-                "Responsive UI engineered for product and marketing surfaces",
-                "Frontend craft that balances polish, speed, and maintainability",
+                "Layered interaction systems that react in real time",
+                "Product-minded UI with motion, hierarchy, and tactile feedback",
+                "Frontend craft that keeps immersive experiences fast and intentional",
               ]}
             />
 
@@ -169,23 +171,23 @@ const projectThemes = [
 
               <div class="hero__meta-grid">
                 <div class="info-card">
-                  <p class="info-card__label">Primary focus</p>
-                  <p>Interaction design, frontend systems, motion direction, and polished responsive UI.</p>
+                  <p class="info-card__label">Interface core</p>
+                  <p>Motion-led interfaces shaped to feel responsive, tactile, and considered from the first interaction.</p>
                 </div>
                 <div class="info-card">
-                  <p class="info-card__label">Working principle</p>
-                  <p>Every effect should clarify, guide, or reward. Never just decorate.</p>
+                  <p class="info-card__label">Build principle</p>
+                  <p>Every effect should reinforce hierarchy, feedback, or intent before it earns a place on the screen.</p>
                 </div>
               </div>
             </MotionReveal>
           </div>
         </section>
 
-        <section class="section section-grid" id="about">
+        <section class="section section-grid" id="about" aria-labelledby="about-title">
           <MotionReveal className="section-heading" client:visible>
-            <p class="section-index">01</p>
+            <p class="section-index" aria-hidden="true">01</p>
             <p class="section-kicker">About</p>
-            <h2>Engineering interactions with clarity and <em>restraint</em>.</h2>
+            <h2 id="about-title">Engineering interactions with clarity and <em>restraint</em>.</h2>
           </MotionReveal>
 
           <MotionReveal className="section-body section-panel prose-flow" delay={0.08} client:visible>
@@ -201,18 +203,18 @@ const projectThemes = [
               precision without sacrificing maintainability.
             </p>
             <p>
-              This next version of my portfolio is designed to reflect that
-              strength more clearly: not just what I have built, but how I think
-              about interaction, motion, and frontend quality.
+              This portfolio is built to reflect that more clearly: not only
+              what I ship, but how I think about interaction, motion, and
+              frontend quality when the details actually matter.
             </p>
           </MotionReveal>
         </section>
 
-        <section class="section section-grid" id="experience">
+        <section class="section section-grid" id="experience" aria-labelledby="experience-title">
           <MotionReveal className="section-heading" client:visible>
-            <p class="section-index">02</p>
+            <p class="section-index" aria-hidden="true">02</p>
             <p class="section-kicker">Experience</p>
-            <h2>A progression shaped by UI craft, collaboration, and shipping.</h2>
+            <h2 id="experience-title">A progression shaped by UI craft, collaboration, and shipping.</h2>
           </MotionReveal>
 
           <MotionReveal className="section-body stack-lg" delay={0.08} client:visible>
@@ -244,11 +246,11 @@ const projectThemes = [
           </MotionReveal>
         </section>
 
-        <section class="section section-grid" id="projects">
+        <section class="section section-grid" id="projects" aria-labelledby="projects-title">
           <MotionReveal className="section-heading" client:visible>
-            <p class="section-index">03</p>
+            <p class="section-index" aria-hidden="true">03</p>
             <p class="section-kicker">Projects</p>
-            <h2>Selected work will be curated around interaction quality and frontend depth.</h2>
+            <h2 id="projects-title">Selected work centered on interaction quality, frontend depth, and polished execution.</h2>
           </MotionReveal>
 
           <MotionReveal className="section-body project-grid" delay={0.08} client:visible>
@@ -264,31 +266,48 @@ const projectThemes = [
           </MotionReveal>
         </section>
 
-        <section class="section section-grid" id="contact">
+        <section class="section section-grid" id="contact" aria-labelledby="contact-title">
           <MotionReveal className="section-heading" client:visible>
-            <p class="section-index">04</p>
+            <p class="section-index" aria-hidden="true">04</p>
             <p class="section-kicker">Contact</p>
-            <h2>Available for product teams, freelance collaborations, and thoughtful frontend work.</h2>
+            <h2 id="contact-title">Available for product teams, freelance collaborations, and thoughtful frontend work.</h2>
           </MotionReveal>
 
           <MotionReveal className="section-body contact-panel" delay={0.08} client:visible>
             <p>
               If you are building a product, campaign, or interface-heavy web
-              experience and want someone who cares deeply about how it feels in
-              motion, let’s talk.
+              experience and want someone who cares as much about feel as
+              function, I’d love to hear what you are working on.
             </p>
 
             <div class="contact-links">
-              <a href="mailto:hello@ayanfeoluwa.dev">hello@ayanfeoluwa.dev</a>
-              <a href="https://github.com/Frokesy" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="mailto:hello@ayanfeoluwa.dev" aria-label="Send an email to Ayanfeoluwa">
+                hello@ayanfeoluwa.dev
+              </a>
+              <a
+                href="https://github.com/Frokesy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Ayanfeoluwa's GitHub profile"
+              >
+                GitHub
+              </a>
               <a
                 href="https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Visit Ayanfeoluwa's LinkedIn profile"
               >
                 LinkedIn
               </a>
-              <a href="https://twitter.com/_frokes" target="_blank" rel="noreferrer">X / Twitter</a>
+              <a
+                href="https://twitter.com/_frokes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Ayanfeoluwa's X profile"
+              >
+                X / Twitter
+              </a>
             </div>
           </MotionReveal>
         </section>

@@ -107,6 +107,25 @@ p {
   outline-offset: 3px;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 700;
+  transform: translateY(-140%);
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline-color: var(--accent-warm);
+}
+
 .page-shell {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
@@ -271,6 +290,7 @@ p {
 .section {
   padding: var(--space-3xl) 0;
   position: relative;
+  scroll-margin-top: 7rem;
 }
 
 .section::before {
@@ -323,7 +343,7 @@ p {
 }
 
 .hero h1 {
-  max-width: 11ch;
+  max-width: 10ch;
   font-family: var(--font-sans);
   font-size: var(--font-size-hero);
   font-weight: 800;
@@ -369,7 +389,7 @@ p {
 }
 
 .hero__lede {
-  max-width: 40rem;
+  max-width: 42rem;
   font-size: var(--font-size-lg);
   line-height: var(--leading-copy);
 }
@@ -480,12 +500,13 @@ p {
 
 .hero-stage__frame {
   position: relative;
-  min-height: 32rem;
+  min-height: 34rem;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius-lg) + 0.6rem);
   background:
-    linear-gradient(180deg, rgba(16, 32, 45, 0.96) 0%, rgba(9, 19, 28, 0.98) 100%);
+    radial-gradient(circle at 18% 18%, rgba(126, 230, 207, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(12, 27, 38, 0.98) 0%, rgba(6, 15, 23, 0.99) 100%);
   box-shadow: var(--shadow);
   isolation: isolate;
   transition:
@@ -494,14 +515,34 @@ p {
     box-shadow var(--transition-medium);
 }
 
+.hero-stage__frame::before,
+.hero-stage__frame::after {
+  content: "";
+  position: absolute;
+  inset: 1.05rem;
+  border-radius: calc(var(--radius-lg) - 0.15rem);
+  pointer-events: none;
+}
+
+.hero-stage__frame::before {
+  border: 1px solid rgba(133, 234, 212, 0.09);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.hero-stage__frame::after {
+  inset: 1.8rem 1.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  mask-image: linear-gradient(135deg, transparent 0 7%, black 7% 93%, transparent 93% 100%);
+}
+
 .hero-stage__glow {
   position: absolute;
-  inset: auto auto 2rem -2rem;
-  width: 14rem;
-  height: 14rem;
+  inset: auto auto 1.4rem -1.5rem;
+  width: 18rem;
+  height: 18rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(94, 205, 182, 0.32) 0%, transparent 68%);
-  filter: blur(18px);
+  background: radial-gradient(circle, rgba(94, 205, 182, 0.28) 0%, transparent 72%);
+  filter: blur(22px);
   animation: heroFloat 9s ease-in-out infinite;
   pointer-events: none;
 }
@@ -510,11 +551,11 @@ p {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 3.6rem 3.6rem;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), black 24%, black 75%, transparent);
-  opacity: 0.34;
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 4.1rem 4.1rem;
+  mask-image: radial-gradient(circle at 50% 50%, black 38%, transparent 100%);
+  opacity: 0.26;
   pointer-events: none;
 }
 
@@ -522,10 +563,18 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, transparent 0%, rgba(122, 231, 199, 0.08) 48%, transparent 100%);
-  opacity: 0.5;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(122, 231, 199, 0.05) 50%, transparent 100%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.015) 0,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+  opacity: 0.62;
   mix-blend-mode: screen;
-  animation: stageSweep 9s ease-in-out infinite;
+  animation: stageSweep 8s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -537,20 +586,20 @@ p {
 }
 
 .hero-stage__orb--primary {
-  top: 13%;
-  right: 12%;
-  width: 8rem;
-  height: 8rem;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), rgba(94, 205, 182, 0.16) 48%, transparent 72%);
+  top: 10%;
+  right: 10%;
+  width: 9rem;
+  height: 9rem;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.55), rgba(94, 205, 182, 0.18) 48%, transparent 72%);
   animation: heroFloat 7s ease-in-out infinite;
 }
 
 .hero-stage__orb--secondary {
-  right: -2rem;
-  bottom: 4rem;
-  width: 12rem;
-  height: 12rem;
-  background: radial-gradient(circle, rgba(241, 184, 161, 0.22) 0%, transparent 65%);
+  right: -1rem;
+  bottom: 2rem;
+  width: 13rem;
+  height: 13rem;
+  background: radial-gradient(circle, rgba(241, 184, 161, 0.18) 0%, transparent 68%);
   animation: heroFloat 11s ease-in-out infinite reverse;
 }
 
@@ -558,7 +607,7 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-  animation: heroDrift 12s ease-in-out infinite;
+  animation: heroDrift 10s ease-in-out infinite;
   contain: layout paint size;
   will-change: transform;
   pointer-events: auto;
@@ -611,6 +660,11 @@ p {
 
 .section-body {
   min-width: 0;
+}
+
+.section:not(.hero) .section-body {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 640px;
 }
 
 .section-panel {
@@ -917,7 +971,7 @@ p {
   }
 
   .hero-stage__frame {
-    min-height: 24rem;
+    min-height: 26rem;
   }
 
   .hero__meta-grid {
@@ -961,7 +1015,7 @@ p {
   }
 
   .hero-stage__frame {
-    min-height: 21rem;
+    min-height: 22rem;
   }
 
   .hero__actions,

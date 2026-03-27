@@ -83,9 +83,9 @@ export default function InteractiveNav({ items }: InteractiveNavProps) {
               key={item.href}
               href={item.href}
               className={isActive ? "is-active" : undefined}
-              aria-current={isActive ? "true" : undefined}
+              aria-current={isActive ? "location" : undefined}
             >
-              <span className="site-nav__number">{item.number}</span>
+              <span className="site-nav__number" aria-hidden="true">{item.number}</span>
               <span>{item.label}</span>
             </a>
           );

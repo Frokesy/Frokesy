@@ -132,9 +132,9 @@ This project aims to feel sleek, modern, and lightweight while using motion and 
 
 ### Phase 5: Final Polish
 
-- [ ] SEO and metadata
-- [ ] Accessibility and performance audit
-- [ ] Content refinement and launch prep
+- [x] SEO and metadata
+- [x] Accessibility and performance audit
+- [x] Content refinement and launch prep
 
 ## Definition of Done
 

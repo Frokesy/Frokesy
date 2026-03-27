@@ -4,22 +4,23 @@ import { motion, useReducedMotion } from "framer-motion";
 type HeroCopyProps = {
   eyebrows: string[];
   signals: string[];
+  titleId?: string;
 };
 
 const titleParts = [
-  { text: "I design and build " },
-  { text: "interaction-rich", emphasis: true },
-  { text: " interfaces that stay fast, sharp, and unmistakably intentional." },
+  { text: "I build " },
+  { text: "kinetic interfaces", emphasis: true },
+  { text: " that feel like living product surfaces, not static pages." },
 ];
 
 const ledeLines = [
-  "I translate visual direction into polished frontend systems with a",
-  "strong eye for motion, UI behavior, and implementation detail.",
-  "My work blends product thinking, visual precision, and",
-  "performance discipline to create experiences people can feel.",
+  "I turn layout, motion, and state changes into frontend systems that",
+  "react with clarity, depth, and a strong sense of control.",
+  "I care about the details that make interfaces feel intentional,",
+  "credible, and sharp in real product work.",
 ];
 
-export default function HeroCopy({ eyebrows, signals }: HeroCopyProps) {
+export default function HeroCopy({ eyebrows, signals, titleId }: HeroCopyProps) {
   const prefersReducedMotion = useReducedMotion();
 
   const container = prefersReducedMotion
@@ -82,7 +83,7 @@ export default function HeroCopy({ eyebrows, signals }: HeroCopyProps) {
         ))}
       </motion.div>
 
-      <motion.h1 className="hero__title" {...item}>
+      <motion.h1 className="hero__title" id={titleId} {...item}>
         {titleParts.map((part) =>
           part.emphasis ? (
             <motion.em
@@ -119,7 +120,7 @@ export default function HeroCopy({ eyebrows, signals }: HeroCopyProps) {
           View selected work
         </a>
         <a className="button button--secondary" href="#contact">
-          Get in touch
+          Let&apos;s build together
         </a>
       </motion.div>
     </motion.div>
