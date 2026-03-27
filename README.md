@@ -6,7 +6,7 @@
 
 Building sleek, responsive, motion-aware web experiences with a strong eye for UI behavior, layout rhythm, and frontend polish.
 
-[Portfolio](#) • [LinkedIn](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/) • [X / Twitter](https://twitter.com/_frokes) • [Email](mailto:hello@ayanfeoluwa.dev)
+[Portfolio](#) • [LinkedIn](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/) • [X / Twitter](https://twitter.com/lini_dev) • [Email](mailto:akindeleayanfeoluwa@gmail.com)
 
 </div>
 
