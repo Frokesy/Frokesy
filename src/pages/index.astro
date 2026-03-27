@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import InteractiveNav from "../components/InteractiveNav";
 import MotionReveal from "../components/MotionReveal";
 
 const navigation = [
@@ -99,16 +100,7 @@ const projectThemes = [
           <span class="site-mark__title">Frontend Interaction Engineer</span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          {
-            navigation.map((item) => (
-              <a href={item.href}>
-                <span class="site-nav__number">{item.number}</span>
-                <span>{item.label}</span>
-              </a>
-            ))
-          }
-        </nav>
+        <InteractiveNav items={navigation} client:load />
       </header>
 
       <main id="top">
