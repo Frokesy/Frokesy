@@ -1,145 +1,95 @@
-# Frokesy Portfolio
+<div align="center">
 
-Personal portfolio for Ayanfeoluwa Akindele, positioned as a frontend interaction engineer with 5 years of professional experience.
+# Ayanfeoluwa Akindele
 
-This project aims to feel sleek, modern, and lightweight while using motion and 3D intentionally rather than decoratively.
+### Frontend Interaction Engineer
 
-## Vision
+Building sleek, responsive, motion-aware web experiences with a strong eye for UI behavior, layout rhythm, and frontend polish.
 
-- Build a portfolio that feels engineered, not templated.
-- Use `three.js` as a signature interaction layer, not as a distraction.
-- Keep the site fast, responsive, accessible, and SEO-friendly.
-- Showcase taste in motion, layout, and interaction design as much as frontend implementation skill.
+[Portfolio](#) • [LinkedIn](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/) • [X / Twitter](https://twitter.com/_frokes) • [Email](mailto:hello@ayanfeoluwa.dev)
 
-## Experience Goals
+</div>
 
-- Clear personal positioning above the fold.
-- Strong editorial layout with distinctive typography and spacing.
-- Purposeful motion for hierarchy, feedback, and delight.
-- One memorable `three.js` moment that strengthens the brand.
-- Polished mobile experience without losing personality.
+---
 
-## Tech Direction
+## About
 
-- `Astro` for the site shell and static rendering.
-- `Tailwind CSS` for styling and design tokens.
-- `Lenis` for smooth scrolling.
-- `Framer Motion` for section transitions, hover states, and interaction choreography.
-- `three.js` for a focused hero or showcase interaction.
-- Optional supporting library only if a specific animation need is not covered cleanly by the stack above.
+I work at the intersection of visual craft and frontend engineering.
 
-## Build Checklist
+My focus is building interfaces that feel sharp, intentional, and reliable in motion, whether that means product surfaces, marketing experiences, or reusable frontend systems.
 
-### 1. Strategy and Content
+I care deeply about:
 
-- [ ] Finalize portfolio positioning and tone of voice.
-- [ ] Define the primary audience: recruiters, founders, agencies, and collaborators.
-- [ ] Write hero copy that clearly communicates frontend interaction engineering.
-- [ ] Rewrite the about section to feel sharper, more senior, and more intentional.
-- [ ] Curate experience highlights with outcome-focused bullets.
-- [ ] Select projects that best demonstrate interaction thinking, UI craft, and technical depth.
-- [ ] Prepare contact links and resume access.
+- interaction feedback
+- motion that supports hierarchy
+- responsive implementation quality
+- clean, maintainable frontend architecture
+- the details that make interfaces feel credible
 
-### 2. Visual System
+---
 
-- [ ] Choose a visual direction that avoids generic dark-portfolio patterns.
-- [ ] Lock a color palette with primary, accent, surface, and text tokens.
-- [ ] Choose a more distinctive typography pairing.
-- [ ] Define spacing, border radius, shadows, and layout rhythm.
-- [ ] Establish reusable design tokens in the codebase.
+## What I Do
 
-### 3. Information Architecture
+```txt
+Interaction-rich product UI
+Motion-driven marketing experiences
+Design-to-code frontend implementation
+Responsive systems and component architecture
+UI polish, refinement, and performance-minded build quality
+```
 
-- [ ] Finalize site sections and order.
-- [ ] Design a compelling hero section with clear CTA.
-- [ ] Structure about, experience, projects, and contact for quick scanning.
-- [ ] Add a section that highlights interaction philosophy or craft.
-- [ ] Ensure navigation reflects section progress and active state.
+---
 
-### 4. Core Frontend Build
+## Tech Stack
 
-- [ ] Refactor the current layout for a cleaner, responsive foundation.
-- [ ] Replace hard-coded sizing with scalable layout rules.
-- [ ] Build responsive navigation behavior for desktop and mobile.
-- [ ] Create reusable section and card patterns.
-- [ ] Remove debug code and legacy styling from the current implementation.
+<p>
+  <img src="https://img.shields.io/badge/React-111827?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-111827?style=for-the-badge&logo=nextdotjs&logoColor=ffffff" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-111827?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-111827?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Astro-111827?style=for-the-badge&logo=astro&logoColor=FF5D01" alt="Astro" />
+  <img src="https://img.shields.io/badge/Framer_Motion-111827?style=for-the-badge&logo=framer&logoColor=ffffff" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/three.js-111827?style=for-the-badge&logo=threedotjs&logoColor=ffffff" alt="three.js" />
+</p>
 
-### 5. Motion System
+---
 
-- [ ] Define motion principles before implementing animations.
-- [ ] Add entrance and scroll-reveal animations for content sections.
-- [ ] Add refined hover and focus interactions for links, buttons, and cards.
-- [ ] Create section transitions that feel smooth but lightweight.
-- [ ] Support `prefers-reduced-motion` for major animated experiences.
+## Current Focus
 
-### 6. Three.js Layer
+- refining my portfolio and personal brand as a frontend interaction engineer
+- building more case-study-driven presentations of my work
+- exploring `three.js`, motion systems, and immersive frontend interactions
+- sharpening the link between design taste and frontend execution
 
-- [ ] Decide the exact `three.js` role before implementation.
-- [ ] Prototype one hero interaction with strong visual identity.
-- [ ] Keep the 3D scene lightweight in geometry, shaders, and texture usage.
-- [ ] Connect the 3D behavior to pointer movement, scroll, or section state.
-- [ ] Ensure the 3D layer degrades gracefully on smaller or weaker devices.
+---
 
-### 7. Projects and Proof
+## Working Style
 
-- [ ] Build project cards that feel like mini case studies.
-- [ ] Highlight problem, approach, and interaction outcome for each project.
-- [ ] Add links to live demos and source where appropriate.
-- [ ] Showcase at least one project with especially strong interaction design.
+I like frontend work that balances:
 
-### 8. Quality and Performance
+- visual clarity
+- strong interaction design
+- implementation discipline
+- maintainability
+- performance
 
-- [ ] Keep the DOM content accessible and semantic.
-- [ ] Audit bundle size as animation libraries are introduced.
-- [ ] Optimize canvas work and animation loops for performance.
-- [ ] Test across mobile, tablet, and desktop breakpoints.
-- [ ] Verify keyboard usability and focus visibility.
-- [ ] Add metadata, Open Graph tags, and favicon polish.
+If it looks good but feels inconsistent, it is not done.
+If it feels good but is fragile in code, it is not done either.
 
-### 9. Ship Readiness
+---
 
-- [ ] Remove placeholder copy and unfinished sections.
-- [ ] Check interaction consistency across the full site.
-- [ ] Do a final visual polish pass for spacing, contrast, and pacing.
-- [ ] Confirm the portfolio feels memorable, fast, and credible.
-- [ ] Ship only when the site clearly supports the "interaction engineer" positioning.
+## Connect
 
-## Suggested Commit Phases
+- GitHub: [@Frokesy](https://github.com/Frokesy)
+- LinkedIn: [Ayanfeoluwa Akindele](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/)
+- X / Twitter: [@lini_dev](https://twitter.com/lini_dev)
+- Email: [akindeleayanfeoluwa@gmail.com](mailto:akindeleayanfeoluwa@gmail.com)
 
-### Phase 1: Foundation
+---
 
-- [ ] Project planning and README roadmap
-- [ ] Content structure and section architecture
-- [ ] Base layout and responsive shell
+<div align="center">
 
-### Phase 2: Visual Identity
+`This repository powers my GitHub profile README.`
 
-- [ ] Design tokens, typography, and color system
-- [ ] Hero redesign
-- [ ] Navigation and section styling
-
-### Phase 3: Motion
-
-- [ ] Framer Motion integration
-- [ ] Scroll choreography and micro-interactions
-- [ ] Reduced-motion support
-
-### Phase 4: 3D Signature
-
-- [ ] `three.js` scene setup
-- [ ] Hero interaction polish
-- [ ] Performance tuning for 3D behavior
-
-### Phase 5: Final Polish
-
-- [x] SEO and metadata
-- [x] Accessibility and performance audit
-- [x] Content refinement and launch prep
-
-## Definition of Done
-
-- [ ] The site presents Ayanfeoluwa as a frontend interaction engineer with confidence and clarity.
-- [ ] Motion feels precise and intentional rather than ornamental.
-- [ ] `three.js` adds identity without hurting performance or usability.
-- [ ] The experience is polished on both desktop and mobile.
-- [ ] The final result is strong enough to serve as the primary personal portfolio.
+</div>
