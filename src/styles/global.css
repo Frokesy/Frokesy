@@ -122,6 +122,7 @@ p {
   justify-content: space-between;
   gap: var(--space-md);
   padding: 1.25rem 0;
+  margin-bottom: 1.25rem;
   backdrop-filter: blur(22px);
 }
 
@@ -164,9 +165,20 @@ p {
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   padding: 0.75rem 1rem;
   color: var(--text-muted);
   font-size: var(--font-size-sm);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.site-nav__number {
+  color: var(--accent-warm);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .site-nav a:hover,
@@ -182,6 +194,22 @@ p {
 
 .section {
   padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  opacity: 0.8;
+}
+
+.hero::before {
+  display: none;
 }
 
 .hero {
@@ -196,6 +224,7 @@ p {
 }
 
 .hero__eyebrow,
+.section-index,
 .section-kicker,
 .project-card__eyebrow,
 .info-card__label,
@@ -204,6 +233,10 @@ p {
   font-size: var(--font-size-xs);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
+}
+
+.section-index {
+  color: var(--accent-warm);
 }
 
 .hero h1,
@@ -474,10 +507,24 @@ p {
   position: sticky;
   top: 5.8rem;
   align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 1.25rem 1.5rem 0;
 }
 
 .section-body {
   min-width: 0;
+}
+
+.section-panel {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius-lg) + 0.1rem);
+  background:
+    linear-gradient(180deg, rgba(14, 28, 39, 0.76) 0%, rgba(11, 22, 31, 0.92) 100%);
+  padding: 1.55rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .prose-flow {
@@ -511,6 +558,20 @@ p {
   margin: 0.3rem 0 0;
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0.28rem;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-warm) 100%);
+  opacity: 0.9;
 }
 
 .timeline-card__company {
@@ -595,6 +656,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  background:
+    linear-gradient(180deg, rgba(16, 32, 45, 0.78) 0%, rgba(10, 22, 31, 0.94) 100%);
 }
 
 .contact-links a {
@@ -623,6 +686,7 @@ p {
 
   .section-heading {
     position: static;
+    padding-right: 0;
   }
 
   .section-heading h2,

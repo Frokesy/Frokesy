@@ -2,10 +2,10 @@
 import "../styles/global.css";
 
 const navigation = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About", number: "01" },
+  { href: "#experience", label: "Experience", number: "02" },
+  { href: "#projects", label: "Projects", number: "03" },
+  { href: "#contact", label: "Contact", number: "04" },
 ];
 
 const experience = [
@@ -101,7 +101,10 @@ const projectThemes = [
         <nav class="site-nav" aria-label="Primary">
           {
             navigation.map((item) => (
-              <a href={item.href}>{item.label}</a>
+              <a href={item.href}>
+                <span class="site-nav__number">{item.number}</span>
+                <span>{item.label}</span>
+              </a>
             ))
           }
         </nav>
@@ -170,11 +173,12 @@ const projectThemes = [
 
         <section class="section section-grid" id="about">
           <div class="section-heading">
+            <p class="section-index">01</p>
             <p class="section-kicker">About</p>
             <h2>Engineering interactions with clarity and <em>restraint</em>.</h2>
           </div>
 
-          <div class="section-body prose-flow">
+          <div class="section-body section-panel prose-flow">
             <p>
               My work sits at the intersection of visual craft and frontend
               implementation. I care about layout rhythm, interface feedback, and
@@ -196,6 +200,7 @@ const projectThemes = [
 
         <section class="section section-grid" id="experience">
           <div class="section-heading">
+            <p class="section-index">02</p>
             <p class="section-kicker">Experience</p>
             <h2>A progression shaped by UI craft, collaboration, and shipping.</h2>
           </div>
@@ -231,6 +236,7 @@ const projectThemes = [
 
         <section class="section section-grid" id="projects">
           <div class="section-heading">
+            <p class="section-index">03</p>
             <p class="section-kicker">Projects</p>
             <h2>Selected work will be curated around interaction quality and frontend depth.</h2>
           </div>
@@ -250,6 +256,7 @@ const projectThemes = [
 
         <section class="section section-grid" id="contact">
           <div class="section-heading">
+            <p class="section-index">04</p>
             <p class="section-kicker">Contact</p>
             <h2>Available for product teams, freelance collaborations, and thoughtful frontend work.</h2>
           </div>
