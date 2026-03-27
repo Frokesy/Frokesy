@@ -1,9 +1,6 @@
+// @ts-nocheck
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-
-import lenis from "astro-lenis";
 
 // https://astro.build/config
-export default defineConfig({
-  integrations: [tailwind(), lenis()]
-});
+export default defineConfig({ vite: { plugins: [tailwindcss()] } });

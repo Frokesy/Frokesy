@@ -1,76 +1,145 @@
-<!--
-**Frokesy/Frokesy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Frokesy Portfolio
 
-Here are some ideas to get you started:
+Personal portfolio for Ayanfeoluwa Akindele, positioned as a frontend interaction engineer with 5 years of professional experience.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+This project aims to feel sleek, modern, and lightweight while using motion and 3D intentionally rather than decoratively.
 
-Hey there 👋
+## Vision
 
-I’m Ayanfeoluwa, a front-end engineer, a passionate and enthusiastic individual that focuses on producing pixel perfect design. I make it my mission to translate user-focused designs into pixel-perfect websites or applications that run blazing fast.
+- Build a portfolio that feels engineered, not templated.
+- Use `three.js` as a signature interaction layer, not as a distraction.
+- Keep the site fast, responsive, accessible, and SEO-friendly.
+- Showcase taste in motion, layout, and interaction design as much as frontend implementation skill.
 
-[![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/_frokes)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/ayanfeoluwa-akindele-5838b0233/)
+## Experience Goals
 
+- Clear personal positioning above the fold.
+- Strong editorial layout with distinctive typography and spacing.
+- Purposeful motion for hierarchy, feedback, and delight.
+- One memorable `three.js` moment that strengthens the brand.
+- Polished mobile experience without losing personality.
 
+## Tech Direction
 
-## 💼 Skills
+- `Astro` for the site shell and static rendering.
+- `Tailwind CSS` for styling and design tokens.
+- `Lenis` for smooth scrolling.
+- `Framer Motion` for section transitions, hover states, and interaction choreography.
+- `three.js` for a focused hero or showcase interaction.
+- Optional supporting library only if a specific animation need is not covered cleanly by the stack above.
 
-![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=html5&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-Redux-informational?style=flat&logo=Redux&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-Vue-informational?style=flat&logo=Vue.js&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-TypeScript-informational?style=flat&logo=TypeScript&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-GreenSock-informational?style=flat&logo=GreenSock&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Code-MongoDB-informational?style=flat&logo=MongoDB&logoColor=white&color=4AB197)
-<details>
-<summary>More Skills</summary>
-<br>
+## Build Checklist
 
-![](https://img.shields.io/badge/Style-CSS-informational?style=flat&logo=css3&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Style-Tailwind-informational?style=flat&logo=Tailwind-CSS&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Style-Bootstrap-informational?style=flat&logo=Bootstrap&logoColor=white&color=4AB197)
+### 1. Strategy and Content
 
-<br>
+- [ ] Finalize portfolio positioning and tone of voice.
+- [ ] Define the primary audience: recruiters, founders, agencies, and collaborators.
+- [ ] Write hero copy that clearly communicates frontend interaction engineering.
+- [ ] Rewrite the about section to feel sharper, more senior, and more intentional.
+- [ ] Curate experience highlights with outcome-focused bullets.
+- [ ] Select projects that best demonstrate interaction thinking, UI craft, and technical depth.
+- [ ] Prepare contact links and resume access.
 
-![](https://img.shields.io/badge/Tools-Vercel-informational?style=flat&logo=Vercel&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Tools-Figma-informational?style=flat&logo=Figma&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Tools-Netlify-informational?style=flat&logo=netlify&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Tools-NPM-informational?style=flat&logo=npm&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Tools-Postman-informational?style=flat&logo=Postman&logoColor=white&color=4AB197)
-![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&logoColor=white&color=4AB197)
+### 2. Visual System
 
-</details>
+- [ ] Choose a visual direction that avoids generic dark-portfolio patterns.
+- [ ] Lock a color palette with primary, accent, surface, and text tokens.
+- [ ] Choose a more distinctive typography pairing.
+- [ ] Define spacing, border radius, shadows, and layout rhythm.
+- [ ] Establish reusable design tokens in the codebase.
 
-<br>
-<br>
+### 3. Information Architecture
 
-## &#x1f4c8; GitHub Stats
+- [ ] Finalize site sections and order.
+- [ ] Design a compelling hero section with clear CTA.
+- [ ] Structure about, experience, projects, and contact for quick scanning.
+- [ ] Add a section that highlights interaction philosophy or craft.
+- [ ] Ensure navigation reflects section progress and active state.
 
-<br>
+### 4. Core Frontend Build
 
-<a href="https://github.com/Frokesy">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Frokesy&hide=html,css&title_color=ffffff&text_color=c9cacc&icon_color=4AB197&bg_color=1A2B34" />
-</a>
+- [ ] Refactor the current layout for a cleaner, responsive foundation.
+- [ ] Replace hard-coded sizing with scalable layout rules.
+- [ ] Build responsive navigation behavior for desktop and mobile.
+- [ ] Create reusable section and card patterns.
+- [ ] Remove debug code and legacy styling from the current implementation.
 
-<a href="https://github.com/Frokesy">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api?username=Frokesy&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=4AB097&bg_color=1A2B34" alt="Frokesy's GitHub Stats" />
-</a>
-<br>
-<br>
+### 5. Motion System
 
+- [ ] Define motion principles before implementing animations.
+- [ ] Add entrance and scroll-reveal animations for content sections.
+- [ ] Add refined hover and focus interactions for links, buttons, and cards.
+- [ ] Create section transitions that feel smooth but lightweight.
+- [ ] Support `prefers-reduced-motion` for major animated experiences.
 
-<br>
+### 6. Three.js Layer
 
-> ### Want to know how I made this README?
->
-> Check out my [tutorial](https://braydoncoyer.dev/blog/creating-a-killer-github-profile-readme-part-1/)!
+- [ ] Decide the exact `three.js` role before implementation.
+- [ ] Prototype one hero interaction with strong visual identity.
+- [ ] Keep the 3D scene lightweight in geometry, shaders, and texture usage.
+- [ ] Connect the 3D behavior to pointer movement, scroll, or section state.
+- [ ] Ensure the 3D layer degrades gracefully on smaller or weaker devices.
+
+### 7. Projects and Proof
+
+- [ ] Build project cards that feel like mini case studies.
+- [ ] Highlight problem, approach, and interaction outcome for each project.
+- [ ] Add links to live demos and source where appropriate.
+- [ ] Showcase at least one project with especially strong interaction design.
+
+### 8. Quality and Performance
+
+- [ ] Keep the DOM content accessible and semantic.
+- [ ] Audit bundle size as animation libraries are introduced.
+- [ ] Optimize canvas work and animation loops for performance.
+- [ ] Test across mobile, tablet, and desktop breakpoints.
+- [ ] Verify keyboard usability and focus visibility.
+- [ ] Add metadata, Open Graph tags, and favicon polish.
+
+### 9. Ship Readiness
+
+- [ ] Remove placeholder copy and unfinished sections.
+- [ ] Check interaction consistency across the full site.
+- [ ] Do a final visual polish pass for spacing, contrast, and pacing.
+- [ ] Confirm the portfolio feels memorable, fast, and credible.
+- [ ] Ship only when the site clearly supports the "interaction engineer" positioning.
+
+## Suggested Commit Phases
+
+### Phase 1: Foundation
+
+- [ ] Project planning and README roadmap
+- [ ] Content structure and section architecture
+- [ ] Base layout and responsive shell
+
+### Phase 2: Visual Identity
+
+- [ ] Design tokens, typography, and color system
+- [ ] Hero redesign
+- [ ] Navigation and section styling
+
+### Phase 3: Motion
+
+- [ ] Framer Motion integration
+- [ ] Scroll choreography and micro-interactions
+- [ ] Reduced-motion support
+
+### Phase 4: 3D Signature
+
+- [ ] `three.js` scene setup
+- [ ] Hero interaction polish
+- [ ] Performance tuning for 3D behavior
+
+### Phase 5: Final Polish
+
+- [ ] SEO and metadata
+- [ ] Accessibility and performance audit
+- [ ] Content refinement and launch prep
+
+## Definition of Done
+
+- [ ] The site presents Ayanfeoluwa as a frontend interaction engineer with confidence and clarity.
+- [ ] Motion feels precise and intentional rather than ornamental.
+- [ ] `three.js` adds identity without hurting performance or usability.
+- [ ] The experience is polished on both desktop and mobile.
+- [ ] The final result is strong enough to serve as the primary personal portfolio.
